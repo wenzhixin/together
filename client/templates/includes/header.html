@@ -1,0 +1,23 @@
+<template name="header">
+    <header>
+        <h1>今天我们想做的事情（{{incompleteCount}}）</h1>
+        <label class="hide-completed">
+            <input type="checkbox" checked="{{hideCompleted}}" />
+            隐藏已完成的任务
+        </label>
+
+        {{> loginButtons}}
+
+        {{#if currentUser}}
+            <form class="new-task">
+                <select name="category">
+                    {{#each categories}}
+                        <option value="{{name}}">{{title}}</option>
+                    {{/each}}
+                </select>
+                <label class="together"><input type="checkbox" name="together"> 一起完成的任务</label>
+                <input class="text" type="text" name="text" placeholder="输入新任务并按 enter 确认" />
+            </form>
+        {{/if}}
+    </header>
+</template>

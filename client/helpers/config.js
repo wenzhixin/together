@@ -6,6 +6,9 @@ Categories = [{
     name: 'fun',
     title: '娱乐'
 },{
+    name: 'life',
+    title: '生活'
+}, {
     name: 'work',
     title: '工作'
 }, {
@@ -14,4 +17,7 @@ Categories = [{
 }, {
     name: 'exercise',
     title: '锻炼'
+}, {
+    name: 'project',
+    title: '项目'
 }];

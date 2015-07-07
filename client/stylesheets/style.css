@@ -138,3 +138,7 @@ header .hide-completed {
 #login-buttons #signup-link {
     display: none;
 }
+
+#login-buttons .login-link-and-dropdown-list {
+    display: inline-block;
+}

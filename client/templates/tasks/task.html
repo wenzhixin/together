@@ -1,6 +1,9 @@
 <template name="task">
     <li class="{{#if checked}}checked{{/if}}">
-        <button class="delete">&times;</button>
+        <span class="button-action info {{#if infoActive}}active{{/if}}">
+            <i class="fa fa-info-circle"></i>
+        </span>
+        <span class="button-action delete"><i class="fa fa-trash-o"></i></span>
 
         <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 

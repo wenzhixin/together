@@ -10,3 +10,5 @@ accounts-password
 iron:router
 sacha:spin
 tmeasday:errors
+fortawesome:fontawesome
+anti:modals

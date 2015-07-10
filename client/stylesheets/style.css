@@ -84,17 +84,17 @@ li .text {
     margin-left: 10px;
 }
 
-li .delete {
+li .button-action {
+    margin-left: 10px;
     display: none;
     float: right;
     font-weight: bold;
-    background: none;
-    font-size: 1em;
-    border: none;
     position: relative;
+    cursor: pointer;
 }
 
-li:hover .delete {
+li:hover .button-action,
+li .button-action.active {
     display: block;
 }
 
@@ -141,4 +141,38 @@ header .hide-completed {
 
 #login-buttons .login-link-and-dropdown-list {
     display: inline-block;
+}
+
+.anti-modal-box {
+    width: auto;
+    max-width: 500px;
+}
+
+.anti-modal-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }

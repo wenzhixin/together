@@ -14,7 +14,7 @@ Template.task.helpers({
         return '';
     },
     infoActive: function () {
-        return this.info !== '';
+        return this.info && this.info !== '';
     }
 });
 

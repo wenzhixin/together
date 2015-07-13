@@ -176,3 +176,8 @@ textarea {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
+
+.filter {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}

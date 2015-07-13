@@ -1,4 +1,18 @@
 <template name="tasks">
+    <div class="filter">
+        <i class="fa fa-filter"></i> 过滤：
+        <select name="filter">
+            <optgroup label="今天的任务">
+                <option value="all">全部</option>
+                <option value="wen">文翼</option>
+                <option value="xiao">笑笑</option>
+                <option value="together">一起</option>
+            </optgroup>
+            <optgroup label="已完成的任务">
+                <option value="completed">已完成</option>
+            </optgroup>
+        </select>
+    </div>
     <ul>
         {{#each tasks}}
             {{> task}}

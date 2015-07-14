@@ -3,6 +3,9 @@ Template.tasks.onCreated = function () {
 };
 
 Template.tasks.helpers({
+    hideCompleted: function () {
+        return Session.get('hideCompleted');
+    },
     tasks: function () {
 
         var date = new Date();
@@ -11,7 +14,13 @@ Template.tasks.helpers({
         date.setMinutes(0);
         date.setSeconds(0);
 
-        var params = {createdAt: {$gte: date}};
+        var params = {
+            $or: [{
+                createdAt: {$gte: date}
+            }, {
+                checked: {$ne: true}
+            }]
+        };
 
         if (!Meteor.userId()) {
             return [];
@@ -44,5 +53,8 @@ Template.tasks.helpers({
 Template.tasks.events({
     'change [name=filter]': function (e) {
         Session.set('filter', $(e.target).val());
+    },
+    'change .hide-completed input': function (event) {
+        Session.set('hideCompleted', event.target.checked);
     }
 });

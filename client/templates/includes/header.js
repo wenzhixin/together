@@ -5,9 +5,6 @@ Template.header.helpers({
         }
         return Tasks.find({checked: {$ne: true}}).count();
     },
-    hideCompleted: function () {
-        return Session.get('hideCompleted');
-    },
     categories: function () {
         return Categories;
     }
@@ -29,12 +26,5 @@ Template.header.events({
 
         event.target.text.value = '';
         return false;
-    },
-    'change .hide-completed input': function (event) {
-        Session.set('hideCompleted', event.target.checked);
     }
 });
-
-Template.header.rendered = function () {
-    $('#signup-link').remove();
-};

@@ -1,6 +1,6 @@
 <template name="tasks">
     <div class="filter">
-        <i class="fa fa-filter"></i> 过滤：
+        <i class="fa fa-filter" title="过滤任务"></i>
         <select name="filter">
             <optgroup label="今天的任务">
                 <option value="all">全部</option>
@@ -12,6 +12,11 @@
                 <option value="completed">已完成</option>
             </optgroup>
         </select>
+
+        <label class="hide-completed">
+            <input type="checkbox" checked="{{hideCompleted}}" />
+            隐藏已完成
+        </label>
     </div>
     <ul>
         {{#each tasks}}

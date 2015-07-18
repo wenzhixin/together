@@ -2,15 +2,22 @@
     <div class="filter">
         <i class="fa fa-filter" title="过滤任务"></i>
         <select name="filter">
-            <optgroup label="今天的任务">
+            <optgroup label="今天">
                 <option value="all">全部</option>
                 <option value="wen">文翼</option>
                 <option value="xiao">笑笑</option>
                 <option value="together">一起</option>
             </optgroup>
-            <optgroup label="已完成的任务">
+            <optgroup label="已完成">
                 <option value="completed">已完成</option>
             </optgroup>
+        </select>
+
+        <select name="filter-category">
+            <option value="all">全部</option>
+            {{#each categories}}
+                <option value="{{name}}">{{title}}</option>
+            {{/each}}
         </select>
 
         <label class="hide-completed">

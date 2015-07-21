@@ -23,6 +23,9 @@ Template.task.helpers({
     tomatoVisible: function () {
         return getTomatoState(this.tomato) === 'stopped' ? 'hide' : '';
     },
+    tomatoCountVisible: function () {
+        return Session.get(this._id + '_total') || getTomatoTotal(this.tomato) ? '' : 'hide';
+    },
     tomatoCount: function () {
         return getTomatoCount(Session.get(this._id + '_total') || getTomatoTotal(this.tomato));
     },

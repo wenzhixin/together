@@ -181,3 +181,25 @@ textarea {
     padding: 10px 20px;
     border-bottom: 1px solid #eee;
 }
+
+li .hide {
+    display: none;
+}
+
+li:hover .hide {
+    display: inline;
+}
+
+li .tomato-action {
+    margin-left: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+li .tomato-action.show {
+    display: inline;
+}
+
+.tomato {
+    margin-left: 5px;
+}

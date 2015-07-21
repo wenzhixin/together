@@ -7,6 +7,15 @@
 
         <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 
-        <span class="text"><strong>{{getUsername}}</strong> - {{getCategory}}{{text}}</span>
+        <span class="text">
+            <strong>{{getUsername}}</strong> - {{getCategory}}{{text}}
+
+            <span class="tomto">{{tomatoCount}} <i class="fa fa-history" title="番茄数"></i></span>
+            <span class="{{tomatoVisible}}">（
+                <i class="tomato-action {{tomatoActionVisible 'play'}} fa fa-play" title="开始任务"></i>
+                <i class="tomato-action {{tomatoActionVisible 'stop'}} fa fa-stop" title="完成任务"></i>
+            {{tomatoTime}}
+            ）</span>
+        </span>
     </li>
 </template>
